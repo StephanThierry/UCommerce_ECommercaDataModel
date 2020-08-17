@@ -105,7 +105,7 @@ namespace EcommerceDataModel
 
             string faceBookJSON = string.Join(",", this.transactionProducts.Select(i => i.toFaceBookJSON()).ToArray());
 
-            return string.Format(script, priceTotal, faceBookJSON);
+            return string.Format(script, priceTotal.ToString("0.00"), faceBookJSON);
         }
 
     }
